@@ -66,9 +66,7 @@ class Map extends Component {
           {...this.state.viewport}
           {...this.props.coordinates}
           mapStyle="mapbox://styles/mapbox/basic-v9"
-          mapboxApiAccessToken={
-            'pk.eyJ1Ijoicmxpc2JvYXJzIiwiYSI6ImNqdjVrZDc5cTAzMjg0M20zOTc5YXc1bjAifQ.ONjJRyzgRkDTyMvth5LYNA'
-          }
+          mapboxApiAccessToken={process.env.REACT_APP_MAP_KEY}
           onViewportChange={viewport => this.handleViewportChange(viewport)}
           onClick={this.handleMapClick}
         >
